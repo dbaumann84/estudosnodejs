@@ -7,13 +7,27 @@ Para criar o arquivo package.json digite no terminal do VS Code o comando:
 
 `npm init -y`
 
->* Para recapitular *:
+>* **Para recapitular**:
 >O arquivo package.json é o coração de qualquer projeto Node. Ele registra metadados importantes sobre um projeto que são necessários antes da publicação no NPM e também define atributos funcionais de um projeto que o npm usa para instalar dependências, executar scripts e identificar o ponto de entrada para nosso pacote.
 
->* npm *: é um gerenciador de pacotes para o Node.JS npm, Inc. é uma subsidiária do GitHub, que fornece hospedagem para desenvolvimento de software e controle de versão com o uso do Git. npm é o gerenciador de pacotes padrão para o ambiente de tempo de execução JavaScript Node.js.
+>* **npm**: é um gerenciador de pacotes para o Node.JS npm, Inc. é uma subsidiária do GitHub, que fornece hospedagem para desenvolvimento de software e controle de versão com o uso do Git. npm é o gerenciador de pacotes padrão para o ambiente de tempo de execução JavaScript Node.js.
 
 * Comando para instalar o [express](https://expressjs.com/pt-br/) no terminal do VS Code.
 
+>**Express.js** é um framework para Node.js que fornece recursos mínimos para construção de servidores web. Foi lançado como software livre e de código aberto sob a Licença MIT. É um dos mais populares frameworks para servidores em Node.js.
+
 `$ npm install express --save`
+
+Instalar o  nodemon que é um utilitário que monitora as mudanças nos arquivos do seu projeto e reinicia automaticamente o servidor Node. js quando necessário. Assim, você não precisa parar e iniciar o servidor manualmente a cada modificação.
+
+`npm install nodemon -D`
+
+Após a instação adicione dentro da tag script do arquivo package.json as linhas abaixo:
+  ```
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  ```
 
 Para inciar o servidor em modo dev digite no terminal o comando `npm run dev`.
