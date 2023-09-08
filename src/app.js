@@ -15,6 +15,11 @@ const selecoes = [
     {id:4,selecao:'Camarões',grupo:'G'},
 ]
 
+//Função auxiliar
+function buscarSelecaoPorId(id){
+    //O retorno será um objeto
+    return selecoes.filter(selecao => selecao.id==id)
+}
 
 
 
@@ -25,6 +30,14 @@ app.get('/',(req,res)=>{
 //Rota para listar todas seleções
 app.get('/selecoes',(req,res)=>{
     res.status(200).send(selecoes)
+})
+
+//Rota para buscar seleções por id
+app.get('/selecoes/:id',(req,res)=>{
+    //variavel index recebe o parametro da variavel id que vem no get
+    //let index = req.params.id
+    res.json(buscarSelecaoPorId(req.params.id))
+    //console.log(index)
 })
 
 //Rota para adicionar novas seleções
