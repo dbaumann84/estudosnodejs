@@ -7,7 +7,7 @@ Para criar o arquivo package.json digite no terminal do VS Code o comando:
 
 `npm init -y`
 
->Recapitular
+>*Para recapitular*:
 >O arquivo package.json é o coração de qualquer projeto Node. Ele registra metadados importantes sobre um projeto que são necessários antes da publicação no NPM e também define atributos funcionais de um projeto que o npm usa para instalar dependências, executar scripts e identificar o ponto de entrada para nosso pacote.
 
 * Comando para instalar o [express](https://expressjs.com/pt-br/) no terminal do VS Code.
