@@ -36,7 +36,7 @@ Para inciar o servidor em modo dev digite no terminal o comando `npm run dev`.
 O professor fez alterações de boas práticas de programação usando import e export
 Para as ações funcionarem corretamente é necessário adicionar o idem abaixo no arquivo package.json logo abaixo do comando `"main": "index.js","` adicione `  "type": "module",`
 Após adicionar o item, execute no terminal o comando `node .\server.js` e verifique se o servidor subiu novamente.
-**{c:red}Atenção{/c}** 
+{c:red}**Atenção** {/c}
 Para continuar utilizando o  _nodemon_ com o comando comando `npm run dev`, você deve alterar no arquivo package.json a linha `"dev": "nodemon src/app.js",` para `"dev": "nodemon src/server.js",`. 
 
 
