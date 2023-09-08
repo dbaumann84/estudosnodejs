@@ -59,6 +59,16 @@ app.delete('/selecoes/:id',(req,res)=>{
     res.send(`Seleção com id ${req.params.id} excluída com sucesso`)
 
 })
+//Rota para atualizar uma seleção
+app.put('/selecoes/:id',(req,res)=>{
+    let index = buscarIndexSelecao(req.params.id)
+    //console.log(index)
+    //Método splice remove elemento de um array
+    selecoes[index].selecao = req.body.selecao
+    selecoes[index].grupo = req.body.grupo
+    res.json(selecoes)
+
+})
 
 
 //Expor app para fora

@@ -40,4 +40,5 @@ Após adicionar o item, execute no terminal o comando `node .\server.js` e verif
 Para continuar utilizando o  _nodemon_ com o comando comando `npm run dev`, você deve alterar no arquivo package.json a linha `"dev": "nodemon src/app.js",` para `"dev": "nodemon src/server.js",`. 
 
 
-
+### Importante estudar também:
+* Manipulação de [Array em JavaScript](https://www.w3schools.com/js/js_array_methods.asp) 
