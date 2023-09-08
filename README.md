@@ -39,6 +39,12 @@ Após adicionar o item, execute no terminal o comando `node .\server.js` e verif
 ### **Atenção** 
 Para continuar utilizando o  _nodemon_ com o comando comando `npm run dev`, você deve alterar no arquivo package.json a linha `"dev": "nodemon src/app.js",` para `"dev": "nodemon src/server.js",`. 
 
+## Da aula 7  em diante
+Até a aula 6 o projeto fez um CRUD sem persistência, de agora em diante é necessário fazer algumas instalações no projeto.
+* para instalar o mysql, digite no terminal o comando `npm install mysql` .
+* caso sua máquina não possua MySQL Workbench realize a instação. [Download](https://dev.mysql.com/downloads/workbench/)
+
+
 
 ### Importante estudar também:
 * Manipulação de [Array em JavaScript](https://www.w3schools.com/js/js_array_methods.asp) 
