@@ -48,8 +48,18 @@ Criação do Schema no MySQL
 ~~~sql
 CREATE SCHEMA `bdcopa` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ;
 ~~~
-
+QUERY da Tabela
+~~~sql
+CREATE TABLE `bdcopa`.`selecoes` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `selecao` VARCHAR(25) NOT NULL,
+  `grupo` CHAR(1) NOT NULL,
+  PRIMARY KEY (`id`));
+~~~
 
 
 ### Importante estudar também:
 * Manipulação de [Array em JavaScript](https://www.w3schools.com/js/js_array_methods.asp) 
+* MySQL
+* CRUD
+* MVC
