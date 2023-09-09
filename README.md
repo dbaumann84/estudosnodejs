@@ -2,6 +2,7 @@
 
 Este projeto é baseado na [playlist do Curso de Node JS do Professor Edson Maia](
 https://youtube.com/playlist?list=PLnex8IkmReXwCyR-cGkyy8tCVAW7fGZow&si=JnwFTgTWPMpktDGM)
+Compartilho minhas anotações para quem tiver interesse. O principal objetivo destas anotações é aprender não apenas com as excelentes aulas e didática do professor Edson, mas também aprofundar meu conhecimento em markdown.
 
 Para criar o arquivo package.json digite no terminal do VS Code o comando: 
 
