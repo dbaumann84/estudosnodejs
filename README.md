@@ -44,6 +44,10 @@ Até a aula 6 o projeto fez um CRUD sem persistência, de agora em diante é nec
 * para instalar o mysql, digite no terminal o comando `npm install mysql` .
 * caso sua máquina não possua MySQL Workbench realize a instação. [Download](https://dev.mysql.com/downloads/workbench/)
 
+No banco de dados
+~~~sql
+CREATE SCHEMA `bdcopa` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ;
+~~~
 
 
 ### Importante estudar também:
