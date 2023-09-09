@@ -1,69 +1,132 @@
-# Anotações importantes sobre o projeto
 
-Este projeto é baseado na [playlist do Curso de Node JS do Professor Edson Maia](
-https://youtube.com/playlist?list=PLnex8IkmReXwCyR-cGkyy8tCVAW7fGZow&si=JnwFTgTWPMpktDGM)
-Compartilho minhas anotações para quem tiver interesse. O principal objetivo destas anotações é aprender não apenas com as excelentes aulas e didática do professor Edson, mas também aprofundar meu conhecimento em markdown.
 
-Para criar o arquivo package.json digite no terminal do VS Code o comando: 
+# Anotações Importantes sobre o Projeto
 
-`npm init -y`
+Este projeto é baseado na [playlist do Curso de Node JS do Professor Edson Maia](https://youtube.com/playlist?list=PLnex8IkmReXwCyR-cGkyy8tCVAW7fGZow&si=JnwFTgTWPMpktDGM).
 
->* **Para recapitular**:
->O arquivo package.json é o coração de qualquer projeto Node. Ele registra metadados importantes sobre um projeto que são necessários antes da publicação no NPM e também define atributos funcionais de um projeto que o npm usa para instalar dependências, executar scripts e identificar o ponto de entrada para nosso pacote.
+Compartilho minhas anotações para quem tiver interesse. O principal objetivo destas anotações é aprender não apenas com as excelentes aulas e didática do Professor Edson, mas também aprofundar meu conhecimento em markdown.
 
->* **npm**: é um gerenciador de pacotes para o Node.JS npm, Inc. é uma subsidiária do GitHub, que fornece hospedagem para desenvolvimento de software e controle de versão com o uso do Git. npm é o gerenciador de pacotes padrão para o ambiente de tempo de execução JavaScript Node.js.
+## Configuração Inicial
 
-* Comando para instalar o [express](https://expressjs.com/pt-br/) no terminal do VS Code.
+Para criar o arquivo `package.json`, digite no terminal do VS Code o seguinte comando:
 
->**Express.js** é um framework para Node.js que fornece recursos mínimos para construção de servidores web. Foi lançado como software livre e de código aberto sob a Licença MIT. É um dos mais populares frameworks para servidores em Node.js.
+```shell
+npm init -y
+```
 
-`$ npm install express --save`
+Para recapitular:
 
-Instalar o  nodemon que é um utilitário que monitora as mudanças nos arquivos do seu projeto e reinicia automaticamente o servidor Node. js quando necessário. Assim, você não precisa parar e iniciar o servidor manualmente a cada modificação.
+O arquivo `package.json` é fundamental em projetos Node.js. Ele registra metadados importantes e define atributos funcionais do projeto para o npm, permitindo a instalação de dependências, execução de scripts e identificação do ponto de entrada do pacote.
 
-`npm install nodemon -D`
+O npm é um gerenciador de pacotes essencial para o ambiente de tempo de execução JavaScript Node.js.
 
-Após a instação adicione dentro da tag script do arquivo package.json as linhas abaixo:
-  ```
-  "scripts": {
-    "dev": "nodemon src/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  ```
+## Instalação do Express.js
 
-Para inciar o servidor em modo dev digite no terminal o comando `npm run dev`.
+Utilize o seguinte comando para instalar o [Express.js](https://expressjs.com/pt-br/) via terminal do VS Code:
 
-## Da aula 3 em diante
-O professor fez alterações de boas práticas de programação usando import e export
-Para as ações funcionarem corretamente é necessário adicionar o idem abaixo no arquivo package.json logo abaixo do comando `"main": "index.js","` adicione `  "type": "module",`
-Após adicionar o item, execute no terminal o comando `node .\server.js` e verifique se o servidor subiu novamente.
-### **Atenção** 
-Para continuar utilizando o  _nodemon_ com o comando comando `npm run dev`, você deve alterar no arquivo package.json a linha `"dev": "nodemon src/app.js",` para `"dev": "nodemon src/server.js",`. 
+```shell
+npm install express --save
+```
 
-## Da aula 7  em diante
-Até a aula 6 o projeto fez um CRUD sem persistência, de agora em diante é necessário fazer algumas instalações no projeto.
-* para instalar o mysql, digite no terminal o comando `npm install mysql` .
-* caso sua máquina não possua MySQL Workbench realize a instação. [Download](https://dev.mysql.com/downloads/workbench/)
+O Express.js é um framework para Node.js que oferece recursos mínimos para a construção de servidores web.
 
-Criação do Schema no MySQL
-~~~sql
-CREATE SCHEMA `bdcopa` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ;
-~~~
-QUERY da Tabela
-~~~sql
+## Instalação do Nodemon
+
+O Nodemon é um utilitário que monitora as mudanças nos arquivos do projeto e reinicia automaticamente o servidor Node.js quando necessário. Para instalá-lo, utilize o comando:
+
+```shell
+npm install nodemon -D
+```
+
+Após a instalação, adicione as seguintes linhas dentro da tag `scripts` no arquivo `package.json`:
+
+```json
+"scripts": {
+  "dev": "nodemon src/app.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+```
+
+Para iniciar o servidor em modo de desenvolvimento, utilize o comando:
+
+```shell
+npm run dev
+```
+
+## A partir da Aula 3
+
+A partir da aula 3, o Professor introduziu alterações de boas práticas de programação, utilizando importações e exportações de módulos. Para garantir o funcionamento correto, adicione a seguinte linha ao arquivo `package.json`, logo abaixo do comando `"main": "index.js"`:
+
+```json
+"type": "module",
+```
+
+Depois de adicionar esse item, execute o seguinte comando no terminal para verificar se o servidor sobe corretamente:
+
+```shell
+node .\server.js
+```
+
+### Atenção
+
+Para continuar utilizando o Nodemon com o comando `npm run dev`, você deve alterar a linha correspondente no arquivo `package.json` de:
+
+```json
+"dev": "nodemon src/app.js",
+```
+
+Para:
+
+```json
+"dev": "nodemon src/server.js",
+```
+
+## A partir da Aula 7
+
+A partir da aula 7, o projeto começa a envolver persistência de dados no MySQL. Siga as instruções abaixo:
+
+1. Para instalar o MySQL, utilize o seguinte comando no terminal:
+
+```shell
+npm install mysql
+```
+
+2. Caso sua máquina não possua o MySQL Workbench, você pode fazer o download [aqui](https://dev.mysql.com/downloads/workbench/).
+
+3. Criação do Schema no MySQL:
+
+```sql
+CREATE SCHEMA `bdcopa` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+```
+
+4. Query da Tabela:
+
+```sql
 CREATE TABLE `bdcopa`.`selecoes` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `selecao` VARCHAR(25) NOT NULL,
   `grupo` CHAR(1) NOT NULL,
-  PRIMARY KEY (`id`));
-~~~
-## Na aula 10
-Na aula 10 o professor Edson propõe adequações no projeto conforme a imagem:
+  PRIMARY KEY (`id`)
+);
+```
+
+## Na Aula 10
+
+Na aula 10, o Professor Edson propõe adequações no projeto para aplicar Padrões de Projetos conforme a imagem:
+
 ![Refatorar para MVC](/img/mvc.png)
 
+### Padrões de Projetos Aplicados
 
-### Importante estudar também:
-* Manipulação de [Array em JavaScript](https://www.w3schools.com/js/js_array_methods.asp) 
-* MySQL
-* CRUD
-* MVC
+- [Singleton](https://refactoring.guru/pt-br/design-patterns/singleton)
+
+### Importante Estudar Também
+
+- Manipulação de Array em JavaScript
+- MySQL
+- CRUD
+- MVC
+- Orientação a Objetos
+- Padrões de Projetos
+
+Essa versão organiza as informações em seções distintas, facilitando a leitura e referência.
