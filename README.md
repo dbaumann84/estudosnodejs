@@ -56,6 +56,9 @@ CREATE TABLE `bdcopa`.`selecoes` (
   `grupo` CHAR(1) NOT NULL,
   PRIMARY KEY (`id`));
 ~~~
+## Na aula 10
+Na aula 10 o professor Edson propõe adequações no projeto conforme a imagem:
+![Refatorar para MVC](/img/mvc.png)
 
 
 ### Importante estudar também:
