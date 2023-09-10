@@ -128,5 +128,7 @@ Na aula 10, o Professor Edson propõe adequações no projeto para aplicar Padr�
 - MVC
 - Orientação a Objetos
 - Padrões de Projetos
+- Padrão Repository
+- Promise
+- Metodos assincronos (async e await)
 
-Essa versão organiza as informações em seções distintas, facilitando a leitura e referência.
