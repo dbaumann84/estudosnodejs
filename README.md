@@ -6,6 +6,11 @@ Este projeto é baseado na [playlist do Curso de Node JS do Professor Edson Maia
 
 Compartilho minhas anotações para quem tiver interesse. O principal objetivo destas anotações é aprender não apenas com as excelentes aulas e didática do Professor Edson, mas também aprofundar meu conhecimento em markdown.
 
+# Importante
+* Aula 9 - Uma API pronta e sem o modelo MVC na forma completa
+* Aula 10 - Uma API pronta em modelo MVC sem o padrão repository
+* Aula 11 - Uma API pronta em modelo MVC com o padrão repository
+
 ## Configuração Inicial
 
 Para criar o arquivo `package.json`, digite no terminal do VS Code o seguinte comando:
@@ -131,4 +136,5 @@ Na aula 10, o Professor Edson propõe adequações no projeto para aplicar Padr�
 - Padrão Repository
 - Promise
 - Metodos assincronos (async e await)
+- jsdoc
 
